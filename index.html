@@ -14,8 +14,7 @@ body{background:#000;color:#fff;overflow-x:hidden}
 height:100vh;
 background:
 linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.85)),
-url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80')
-center/cover no-repeat;
+url('images/hero-cover.jpg') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -27,7 +26,7 @@ text-align:center;
 
 /* SECTION */
 .section{padding:110px 8%}
-.section h2{font-size:3rem;margin-bottom:40px}
+.section h2{font-size:3rem;margin-bottom:50px}
 
 /* GLOW BOX */
 .glow{
@@ -55,18 +54,28 @@ position:absolute;
 width:100%;
 height:100%;
 object-fit:cover;
-animation:fade 12s infinite;
+opacity:0;
+animation:fade 8s infinite;
 }
+.slider img:nth-child(1){animation-delay:0s}
 .slider img:nth-child(2){animation-delay:4s}
-.slider img:nth-child(3){animation-delay:8s}
 
 @keyframes fade{
 0%{opacity:0}
 10%{opacity:1}
-30%{opacity:1}
-40%{opacity:0}
+40%{opacity:1}
+50%{opacity:0}
 100%{opacity:0}
 }
+
+/* STORY ANIMATION */
+.reveal{opacity:0;transform:translateY(80px);transition:1.2s ease}
+.reveal.show{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-120px);transition:1.2s ease}
+.reveal-right{opacity:0;transform:translateX(120px);transition:1.2s ease}
+.reveal-left.show,.reveal-right.show{opacity:1;transform:none}
+.zoom{transform:scale(1.15);opacity:0;transition:1.5s ease}
+.zoom.show{transform:scale(1);opacity:1}
 
 /* FOOTER */
 footer{
@@ -74,122 +83,114 @@ background:#050505;
 padding:80px 8%;
 border-top:1px solid rgba(0,255,136,.3);
 }
-footer p{
-opacity:.75;
-line-height:1.8;
-font-size:0.95rem;
-}
-footer h3{
-color:#00ff88;
-margin-bottom:15px;
-}
-footer a{
-color:#00ff88;
-text-decoration:none;
-}
+footer p{opacity:.75;line-height:1.8;font-size:.95rem}
+footer a{color:#00ff88;text-decoration:none}
 </style>
 </head>
 
 <body>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero reveal">
 <div>
 <h1>KNG <span>Commodities LLP</span></h1>
-<p>International Commodity & Edible Oil Brokerage<br>
+<p>International Edible Oil Brokerage<br>
 Import • Export • Trade Facilitation</p>
 </div>
 </section>
 
 <!-- STORY -->
 <section class="section">
-<div class="glow">
+<div class="glow reveal">
 <h2>Our Story</h2>
 <p>
 Founded in 2017, KNG Commodities LLP is a Mumbai-based international
-commodity brokerage firm specializing in edible oils.
-We act as independent intermediaries, connecting buyers and sellers
-through transparent and disciplined trade facilitation.
+brokerage firm specializing in edible oils. We act purely as
+intermediaries, connecting buyers and sellers with transparency,
+discipline and long-term vision.
 </p>
 </div>
 </section>
 
 <!-- COMMODITIES -->
 <section class="section">
-<h2>Our Commodities</h2>
+<h2 class="reveal">Our Commodities</h2>
 
-<div class="glow commodity">
+<div class="glow commodity reveal-left">
 <div>
-<h3>Palm Oil</h3>
-<p>Crude and refined palm oil sourced from leading global origins
-with reliable supply chains.</p>
+<h3>Crude Palm Oil (CPO)</h3>
+<p>Bulk crude palm oil sourced from leading producing regions.</p>
 </div>
-<div class="slider">
-<img src="https://images.unsplash.com/photo-1604335399105-31f54b6c0a39?auto=format&fit=crop&w=1200&q=80">
-<img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe6?auto=format&fit=crop&w=1200&q=80">
-<img src="https://images.unsplash.com/photo-1587049352858-3c5c38f33d95?auto=format&fit=crop&w=1200&q=80">
+<div class="slider zoom">
+<img src="images/palm1.jpg">
+<img src="images/palm2.jpg">
 </div>
 </div>
 
-<div class="glow commodity">
+<div class="glow commodity reveal-right">
+<div>
+<h3>RBD Palm Oil</h3>
+<p>Refined palm oil suitable for food and industrial applications.</p>
+</div>
+<div class="slider zoom">
+<img src="images/rbd1.jpg">
+<img src="images/rbd2.jpg">
+</div>
+</div>
+
+<div class="glow commodity reveal-left">
 <div>
 <h3>Soybean Oil</h3>
-<p>High quality soybean oil traded across domestic and
-international markets.</p>
+<p>High quality soybean oil traded across global markets.</p>
 </div>
-<div class="slider">
-<img src="https://images.unsplash.com/photo-1586201375754-1421e69e5a23?auto=format&fit=crop&w=1200&q=80">
-<img src="https://images.unsplash.com/photo-1615486363973-f79d875780cf?auto=format&fit=crop&w=1200&q=80">
-<img src="https://images.unsplash.com/photo-1620799139652-7153b4a5d6c2?auto=format&fit=crop&w=1200&q=80">
+<div class="slider zoom">
+<img src="images/soy1.jpg">
+<img src="images/soy2.jpg">
 </div>
 </div>
 
-<div class="glow commodity">
+<div class="glow commodity reveal-right">
 <div>
 <h3>Sunflower Oil</h3>
-<p>Premium sunflower oil with consistent quality
-and logistics assurance.</p>
+<p>Premium sunflower oil with consistent quality supply.</p>
 </div>
-<div class="slider">
-<img src="https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&w=1200&q=80">
-<img src="https://images.unsplash.com/photo-1594282486552-05d7f4e9c9c0?auto=format&fit=crop&w=1200&q=80">
-<img src="https://images.unsplash.com/photo-1622030411594-c6d8f14f7c9c?auto=format&fit=crop&w=1200&q=80">
+<div class="slider zoom">
+<img src="images/sunflower1.jpg">
+<img src="images/sunflower2.jpg">
+</div>
+</div>
+
+<div class="glow commodity reveal-left">
+<div>
+<h3>Canola / Rapeseed Oil</h3>
+<p>Canola oil sourced from reliable international exporters.</p>
+</div>
+<div class="slider zoom">
+<img src="images/canola1.jpg">
+<img src="images/canola2.jpg">
+</div>
+</div>
+
+<div class="glow commodity reveal-right">
+<div>
+<h3>Rice Bran Oil</h3>
+<p>Indian and export-grade rice bran oil facilitated through partners.</p>
+</div>
+<div class="slider zoom">
+<img src="images/ricebran1.jpg">
+<img src="images/ricebran2.jpg">
 </div>
 </div>
 </section>
 
 <!-- TERMS -->
 <section class="section">
-<div class="glow">
+<div class="glow reveal">
 <h2>Terms & Conditions</h2>
-
 <p>
-KNG Commodities LLP acts solely as an independent commodity broker
-and trade intermediary. The company does not buy, sell, store,
-transport, or take ownership of any goods.
-</p><br>
-
-<p>
-All commercial decisions including pricing, quality, quantity,
-payment terms, logistics, customs clearance, import/export compliance,
-and delivery obligations are the sole responsibility of the
-respective buyers and sellers.
-</p><br>
-
-<p>
-KNG Commodities LLP shall not be held responsible for any financial loss,
-market fluctuation, delay, default, dispute, or damage arising
-between transacting parties.
-</p><br>
-
-<p>
-Nothing on this website constitutes financial, investment, legal,
-or tax advice. Users are advised to conduct independent due diligence.
-</p><br>
-
-<p>
-These terms shall be governed by the laws of India and subject to
-the exclusive jurisdiction of courts in Mumbai, Maharashtra.
+KNG Commodities LLP acts solely as an independent commodity broker.
+We do not buy, sell, store or transport goods. All pricing, logistics,
+quality, delivery and contractual risks rest with the buyer and seller.
 </p>
 </div>
 </section>
@@ -198,16 +199,21 @@ the exclusive jurisdiction of courts in Mumbai, Maharashtra.
 <footer>
 <p>
 <b>KNG Commodities LLP</b><br><br>
-
 GSTIN: <b>27AASFK4574H1ZR</b><br><br>
-
 📍 Mumbai, India<br>
 📞 +91 98200 29262<br><br>
-
 ✉️ <a href="mailto:kngcommodities@gmail.com">kngcommodities@gmail.com</a><br>
 ✉️ <a href="mailto:kngprasanna@gmail.com">kngprasanna@gmail.com</a>
 </p>
 </footer>
+
+<script>
+const els=document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.zoom');
+const obs=new IntersectionObserver(e=>{
+e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')})
+},{threshold:.25});
+els.forEach(el=>obs.observe(el));
+</script>
 
 </body>
 </html>
