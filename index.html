@@ -13,77 +13,96 @@ body{background:#000;color:#fff;overflow-x:hidden}
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.85)),
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.9)),
 url('images/hero-cover.jpg') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 }
-.hero h1{font-size:4rem;letter-spacing:3px}
+.hero h1{font-size:4.3rem;letter-spacing:4px}
 .hero span{color:#00ff88}
-.hero p{margin-top:20px;font-size:1.2rem;opacity:.85}
+.hero p{margin-top:15px;font-size:1.25rem;opacity:.9}
 
 /* SECTION */
-.section{padding:110px 8%}
-.section h2{font-size:3rem;margin-bottom:50px}
+.section{padding:80px 6%}
+h2{font-size:2.8rem;margin-bottom:30px}
 
 /* GLOW BOX */
 .glow{
-border:1px solid rgba(0,255,136,.45);
-box-shadow:0 0 35px rgba(0,255,136,.4);
-border-radius:18px;
-padding:45px;
-margin-bottom:90px;
+border:1px solid rgba(0,255,136,.6);
+box-shadow:0 0 40px rgba(0,255,136,.45);
+padding:35px;
+border-radius:16px;
+margin-bottom:60px;
+}
+
+/* STORY */
+.story{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:30px;
+align-items:center;
+}
+.story img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:12px;
 }
 
 /* COMMODITY */
 .commodity{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:50px;
+gap:30px;
 align-items:center;
+margin-bottom:50px;
 }
-.commodity h3{font-size:2rem;margin-bottom:15px}
-.commodity p{opacity:.8;line-height:1.7}
+.commodity h3{font-size:1.9rem}
+.commodity p{opacity:.85;line-height:1.6}
 
 /* SLIDER */
-.slider{position:relative;height:300px;overflow:hidden;border-radius:15px}
+.slider{
+position:relative;
+height:300px;
+overflow:hidden;
+border-radius:12px;
+}
 .slider img{
 position:absolute;
 width:100%;
 height:100%;
 object-fit:cover;
 opacity:0;
-animation:fade 8s infinite;
+transition:opacity 1s ease;
 }
-.slider img:nth-child(1){animation-delay:0s}
-.slider img:nth-child(2){animation-delay:4s}
+.slider img.active{opacity:1}
 
-@keyframes fade{
-0%{opacity:0}
-10%{opacity:1}
-40%{opacity:1}
-50%{opacity:0}
-100%{opacity:0}
+/* LOGISTICS STRIP */
+.logistics{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+}
+.logistics img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
 }
 
-/* STORY ANIMATION */
-.reveal{opacity:0;transform:translateY(80px);transition:1.2s ease}
+/* STORY SCROLL ANIMATION */
+.reveal{opacity:0;transform:translateY(90px);transition:1.2s ease}
 .reveal.show{opacity:1;transform:none}
-.reveal-left{opacity:0;transform:translateX(-120px);transition:1.2s ease}
-.reveal-right{opacity:0;transform:translateX(120px);transition:1.2s ease}
-.reveal-left.show,.reveal-right.show{opacity:1;transform:none}
-.zoom{transform:scale(1.15);opacity:0;transition:1.5s ease}
-.zoom.show{transform:scale(1);opacity:1}
 
 /* FOOTER */
 footer{
 background:#050505;
-padding:80px 8%;
-border-top:1px solid rgba(0,255,136,.3);
+padding:70px 6%;
+border-top:1px solid rgba(0,255,136,.4);
 }
-footer p{opacity:.75;line-height:1.8;font-size:.95rem}
+footer p{opacity:.8;line-height:1.8}
 footer a{color:#00ff88;text-decoration:none}
 </style>
 </head>
@@ -94,21 +113,28 @@ footer a{color:#00ff88;text-decoration:none}
 <section class="hero reveal">
 <div>
 <h1>KNG <span>Commodities LLP</span></h1>
-<p>International Edible Oil Brokerage<br>
+<p>International Edible Oil & Commodity Brokerage<br>
 Import • Export • Trade Facilitation</p>
 </div>
 </section>
 
 <!-- STORY -->
 <section class="section">
-<div class="glow reveal">
-<h2>Our Story</h2>
+<div class="glow story reveal">
+<div>
+<h2>Who We Are</h2>
 <p>
-Founded in 2017, KNG Commodities LLP is a Mumbai-based international
-brokerage firm specializing in edible oils. We act purely as
-intermediaries, connecting buyers and sellers with transparency,
-discipline and long-term vision.
+Established in 2017, KNG Commodities LLP is a Mumbai-based
+commodity brokerage firm deeply embedded in fast-moving
+edible oil markets.  
+We operate where volumes are high, timing matters,
+and execution is everything.
 </p>
+<p style="margin-top:15px">
+<strong>Our job is simple:</strong> connect buyers & sellers and get the trade done.
+</p>
+</div>
+<img src="images/ship1.jpg">
 </div>
 </section>
 
@@ -116,81 +142,99 @@ discipline and long-term vision.
 <section class="section">
 <h2 class="reveal">Our Commodities</h2>
 
-<div class="glow commodity reveal-left">
+<div class="glow commodity reveal">
 <div>
 <h3>Crude Palm Oil (CPO)</h3>
-<p>Bulk crude palm oil sourced from leading producing regions.</p>
+<p>High-volume crude palm oil traded from major global origins.</p>
 </div>
-<div class="slider zoom">
-<img src="images/palm1.jpg">
+<div class="slider" data-slider>
+<img src="images/palm1.jpg" class="active">
 <img src="images/palm2.jpg">
+<img src="images/palm3.jpg">
 </div>
 </div>
 
-<div class="glow commodity reveal-right">
+<div class="glow commodity reveal">
 <div>
 <h3>RBD Palm Oil</h3>
 <p>Refined palm oil suitable for food and industrial applications.</p>
 </div>
-<div class="slider zoom">
-<img src="images/rbd1.jpg">
+<div class="slider" data-slider>
+<img src="images/rbd1.jpg" class="active">
 <img src="images/rbd2.jpg">
+<img src="images/container1.jpg">
 </div>
 </div>
 
-<div class="glow commodity reveal-left">
+<div class="glow commodity reveal">
 <div>
 <h3>Soybean Oil</h3>
-<p>High quality soybean oil traded across global markets.</p>
+<p>Actively traded soybean oil across domestic & global markets.</p>
 </div>
-<div class="slider zoom">
-<img src="images/soy1.jpg">
+<div class="slider" data-slider>
+<img src="images/soy1.jpg" class="active">
 <img src="images/soy2.jpg">
+<img src="images/container1.jpg">
 </div>
 </div>
 
-<div class="glow commodity reveal-right">
+<div class="glow commodity reveal">
 <div>
 <h3>Sunflower Oil</h3>
-<p>Premium sunflower oil with consistent quality supply.</p>
+<p>Premium sunflower oil with stable supply chains.</p>
 </div>
-<div class="slider zoom">
-<img src="images/sunflower1.jpg">
+<div class="slider" data-slider>
+<img src="images/sunflower1.jpg" class="active">
 <img src="images/sunflower2.jpg">
+<img src="images/ship2.jpg">
 </div>
 </div>
 
-<div class="glow commodity reveal-left">
+<div class="glow commodity reveal">
 <div>
 <h3>Canola / Rapeseed Oil</h3>
-<p>Canola oil sourced from reliable international exporters.</p>
+<p>Canola oil sourced from trusted international exporters.</p>
 </div>
-<div class="slider zoom">
-<img src="images/canola1.jpg">
+<div class="slider" data-slider>
+<img src="images/canola1.jpg" class="active">
 <img src="images/canola2.jpg">
+<img src="images/container1.jpg">
 </div>
 </div>
 
-<div class="glow commodity reveal-right">
+<div class="glow commodity reveal">
 <div>
 <h3>Rice Bran Oil</h3>
-<p>Indian and export-grade rice bran oil facilitated through partners.</p>
+<p>Indian and export-grade rice bran oil.</p>
 </div>
-<div class="slider zoom">
-<img src="images/ricebran1.jpg">
+<div class="slider" data-slider>
+<img src="images/ricebran1.jpg" class="active">
 <img src="images/ricebran2.jpg">
+<img src="images/ship1.jpg">
 </div>
+</div>
+</section>
+
+<!-- LOGISTICS -->
+<section class="section">
+<h2 class="reveal">Ports, Containers & Logistics</h2>
+<div class="logistics reveal">
+<img src="images/ship1.jpg">
+<img src="images/ship2.jpg">
+<img src="images/container1.jpg">
+<img src="images/container2.jpg">
 </div>
 </section>
 
 <!-- TERMS -->
 <section class="section">
 <div class="glow reveal">
-<h2>Terms & Conditions</h2>
+<h2>Broker Disclaimer</h2>
 <p>
-KNG Commodities LLP acts solely as an independent commodity broker.
-We do not buy, sell, store or transport goods. All pricing, logistics,
-quality, delivery and contractual risks rest with the buyer and seller.
+KNG Commodities LLP acts strictly as an independent trade intermediary.
+We do not buy, sell, store, transport or take ownership of goods.
+All pricing, quality, logistics, payment and market risks remain
+solely with the buyer and seller.
 </p>
 </div>
 </section>
@@ -199,8 +243,8 @@ quality, delivery and contractual risks rest with the buyer and seller.
 <footer>
 <p>
 <b>KNG Commodities LLP</b><br><br>
-GSTIN: <b>27AASFK4574H1ZR</b><br><br>
-📍 Mumbai, India<br>
+GSTIN: <b>27AASFK4574H1ZR</b><br>
+Mumbai, India<br>
 📞 +91 98200 29262<br><br>
 ✉️ <a href="mailto:kngcommodities@gmail.com">kngcommodities@gmail.com</a><br>
 ✉️ <a href="mailto:kngprasanna@gmail.com">kngprasanna@gmail.com</a>
@@ -208,11 +252,25 @@ GSTIN: <b>27AASFK4574H1ZR</b><br><br>
 </footer>
 
 <script>
-const els=document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.zoom');
-const obs=new IntersectionObserver(e=>{
-e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')})
+// SCROLL STORY REVEAL
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting) e.target.classList.add('show');
+});
 },{threshold:.25});
-els.forEach(el=>obs.observe(el));
+reveals.forEach(r=>obs.observe(r));
+
+// SLIDER AUTO PLAY
+document.querySelectorAll('[data-slider]').forEach(slider=>{
+let slides=slider.querySelectorAll('img');
+let i=0;
+setInterval(()=>{
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
+},3000);
+});
 </script>
 
 </body>
