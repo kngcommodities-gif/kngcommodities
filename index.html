@@ -2,252 +2,211 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>KNG Commodities LLP | International Edible Oil Brokers</title>
+<title>KNG Commodities LLP</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="KNG Commodities LLP is a Mumbai based international edible oil brokerage firm established in 2017.">
 
 <style>
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#ffffff;
-    color:#333;
-    line-height:1.75;
-}
-header{
-    background:linear-gradient(120deg,#0b3c5d,#06263f);
-    color:#fff;
-    padding:90px 20px;
-    text-align:center;
-}
-header h1{
-    font-size:44px;
-    margin-bottom:10px;
-}
-header p{
-    font-size:18px;
-    margin:6px 0;
-}
-section{
-    max-width:1150px;
-    margin:auto;
-    padding:80px 20px;
-}
-.alt{
-    background:#f6f8fa;
-}
-h2{
-    color:#0b3c5d;
-    margin-bottom:30px;
-    font-size:34px;
-}
-h3{
-    color:#06263f;
-    margin-bottom:15px;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{background:#000;color:#fff;overflow-x:hidden}
 
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:35px;
+/* HERO */
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.85)),
+url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80')
+center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
+.hero h1{font-size:4rem;letter-spacing:3px}
+.hero span{color:#00ff88}
+.hero p{margin-top:20px;font-size:1.2rem;opacity:.85}
+
+/* SECTION */
+.section{padding:110px 8%}
+.section h2{font-size:3rem;margin-bottom:40px}
 
 /* GLOW BOX */
-.glow-box{
-    background:#ffffff;
-    padding:35px;
-    border-radius:14px;
-    position:relative;
-    box-shadow:
-        0 0 15px rgba(0,180,120,0.25),
-        0 0 35px rgba(0,180,120,0.15);
-    transition:all .4s ease;
-}
-.glow-box:hover{
-    transform:translateY(-10px);
-    box-shadow:
-        0 0 25px rgba(0,180,120,0.45),
-        0 0 60px rgba(0,180,120,0.25);
+.glow{
+border:1px solid rgba(0,255,136,.45);
+box-shadow:0 0 35px rgba(0,255,136,.4);
+border-radius:18px;
+padding:45px;
+margin-bottom:90px;
 }
 
-/* NORMAL BOX */
-.box{
-    border:1px solid #ddd;
-    padding:30px;
-    border-radius:12px;
-    background:#fff;
+/* COMMODITY */
+.commodity{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+.commodity h3{font-size:2rem;margin-bottom:15px}
+.commodity p{opacity:.8;line-height:1.7}
+
+/* SLIDER */
+.slider{position:relative;height:300px;overflow:hidden;border-radius:15px}
+.slider img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+animation:fade 12s infinite;
+}
+.slider img:nth-child(2){animation-delay:4s}
+.slider img:nth-child(3){animation-delay:8s}
+
+@keyframes fade{
+0%{opacity:0}
+10%{opacity:1}
+30%{opacity:1}
+40%{opacity:0}
+100%{opacity:0}
 }
 
-/* HIGHLIGHT */
-.highlight{
-    background:#0b3c5d;
-    color:#fff;
-    padding:70px 20px;
-    text-align:center;
-}
-.highlight h2{color:#fff;}
-
+/* FOOTER */
 footer{
-    background:#06263f;
-    color:#ccc;
-    padding:55px 20px;
-    font-size:14px;
+background:#050505;
+padding:80px 8%;
+border-top:1px solid rgba(0,255,136,.3);
+}
+footer p{
+opacity:.75;
+line-height:1.8;
+font-size:0.95rem;
 }
 footer h3{
-    color:#fff;
+color:#00ff88;
+margin-bottom:15px;
 }
-footer ul{
-    padding-left:18px;
-}
-.copy{
-    text-align:center;
-    margin-top:45px;
-    color:#aaa;
+footer a{
+color:#00ff88;
+text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>KNG Commodities LLP</h1>
-    <p>International Edible Oil Brokers & Intermediators</p>
-    <p><strong>Established 2017 | Mumbai, India</strong></p>
-</header>
-
-<section>
-<h2>About KNG Commodities LLP</h2>
-<p>
-KNG Commodities LLP is a Mumbai-based international brokerage firm established in 2017,
-specializing exclusively in edible oils. We act as independent intermediators, connecting
-reliable buyers and sellers across domestic and international markets.
-</p>
-<p>
-Our focus is on transparency, disciplined execution, and long-term trade relationships
-within the global edible oil supply chain.
-</p>
-</section>
-
-<section class="alt">
-<h2>Our Core Expertise</h2>
-<div class="grid">
-<div class="glow-box">
-<h3>Edible Oil Brokerage</h3>
-<p>
-Specialized intermediation for bulk and containerized edible oil shipments across
-global markets with structured trade processes.
-</p>
-</div>
-<div class="glow-box">
-<h3>Global Trade Coordination</h3>
-<p>
-End-to-end coordination from negotiation to contract alignment and shipment follow-ups.
-</p>
-</div>
-<div class="glow-box">
-<h3>Market Intelligence</h3>
-<p>
-Indicative pricing trends, supply-demand insights, and market updates to support
-commercial decision-making.
-</p>
-</div>
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>KNG <span>Commodities LLP</span></h1>
+<p>International Commodity & Edible Oil Brokerage<br>
+Import • Export • Trade Facilitation</p>
 </div>
 </section>
 
-<section>
-<h2>Commodities We Deal In</h2>
+<!-- STORY -->
+<section class="section">
+<div class="glow">
+<h2>Our Story</h2>
 <p>
-We facilitate trade for a broad range of edible oils sourced from leading global origins.
+Founded in 2017, KNG Commodities LLP is a Mumbai-based international
+commodity brokerage firm specializing in edible oils.
+We act as independent intermediaries, connecting buyers and sellers
+through transparent and disciplined trade facilitation.
 </p>
-<div class="grid">
-<div class="glow-box">Crude Palm Oil (CPO)</div>
-<div class="glow-box">RBD Palm Oil</div>
-<div class="glow-box">Soybean Oil</div>
-<div class="glow-box">Sunflower Oil</div>
-<div class="glow-box">Canola / Rapeseed Oil</div>
-<div class="glow-box">Rice Bran Oil</div>
 </div>
 </section>
 
-<section class="alt">
-<h2>How We Work</h2>
-<div class="grid">
-<div class="box">
-<h3>Buyer & Seller Identification</h3>
-<p>
-Identification and connection of credible counterparties based on volume, destination,
-and commercial terms.
-</p>
+<!-- COMMODITIES -->
+<section class="section">
+<h2>Our Commodities</h2>
+
+<div class="glow commodity">
+<div>
+<h3>Palm Oil</h3>
+<p>Crude and refined palm oil sourced from leading global origins
+with reliable supply chains.</p>
 </div>
-<div class="box">
-<h3>Negotiation & Structuring</h3>
-<p>
-Assistance in price discovery, negotiation, and commercial structuring of deals.
-</p>
-</div>
-<div class="box">
-<h3>Execution Support</h3>
-<p>
-Coordination of contracts, documentation, and shipment monitoring between parties.
-</p>
+<div class="slider">
+<img src="https://images.unsplash.com/photo-1604335399105-31f54b6c0a39?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe6?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1587049352858-3c5c38f33d95?auto=format&fit=crop&w=1200&q=80">
 </div>
 </div>
-<p><strong>Note:</strong> KNG Commodities LLP does not trade on its own account.</p>
+
+<div class="glow commodity">
+<div>
+<h3>Soybean Oil</h3>
+<p>High quality soybean oil traded across domestic and
+international markets.</p>
+</div>
+<div class="slider">
+<img src="https://images.unsplash.com/photo-1586201375754-1421e69e5a23?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1615486363973-f79d875780cf?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1620799139652-7153b4a5d6c2?auto=format&fit=crop&w=1200&q=80">
+</div>
+</div>
+
+<div class="glow commodity">
+<div>
+<h3>Sunflower Oil</h3>
+<p>Premium sunflower oil with consistent quality
+and logistics assurance.</p>
+</div>
+<div class="slider">
+<img src="https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1594282486552-05d7f4e9c9c0?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1622030411594-c6d8f14f7c9c?auto=format&fit=crop&w=1200&q=80">
+</div>
+</div>
 </section>
 
-<section>
-<h2>Why Choose KNG Commodities LLP</h2>
-<div class="grid">
-<div class="glow-box">Established Brokerage Since 2017</div>
-<div class="glow-box">Focused Exclusively on Edible Oils</div>
-<div class="glow-box">Transparent & Ethical Intermediation</div>
-<div class="glow-box">Strong Global Trade Network</div>
+<!-- TERMS -->
+<section class="section">
+<div class="glow">
+<h2>Terms & Conditions</h2>
+
+<p>
+KNG Commodities LLP acts solely as an independent commodity broker
+and trade intermediary. The company does not buy, sell, store,
+transport, or take ownership of any goods.
+</p><br>
+
+<p>
+All commercial decisions including pricing, quality, quantity,
+payment terms, logistics, customs clearance, import/export compliance,
+and delivery obligations are the sole responsibility of the
+respective buyers and sellers.
+</p><br>
+
+<p>
+KNG Commodities LLP shall not be held responsible for any financial loss,
+market fluctuation, delay, default, dispute, or damage arising
+between transacting parties.
+</p><br>
+
+<p>
+Nothing on this website constitutes financial, investment, legal,
+or tax advice. Users are advised to conduct independent due diligence.
+</p><br>
+
+<p>
+These terms shall be governed by the laws of India and subject to
+the exclusive jurisdiction of courts in Mumbai, Maharashtra.
+</p>
 </div>
 </section>
 
-<section class="highlight">
-<h2>Founder</h2>
-<p>
-<strong>Mr. Nimesh Ashok Galia</strong><br>
-Founder – KNG Commodities LLP
-</p>
-<p>
-The firm is led with a commitment to integrity, consistency, and relationship-driven trade.
-</p>
-</section>
-
-<section>
-<h2>Contact Information</h2>
-<p>
-<strong>Email:</strong> kngcommodities@gmail.com<br>
-<strong>Phone:</strong> +91 9820029262<br>
-<strong>Office:</strong> Mumbai, India<br>
-<strong>GST No:</strong> 27AASFK4574H1ZR
-</p>
-</section>
-
+<!-- FOOTER -->
 <footer>
+<p>
+<b>KNG Commodities LLP</b><br><br>
 
-<h3>Terms & Conditions</h3>
-<ul>
-<li>KNG Commodities LLP acts solely as an intermediary.</li>
-<li>The firm does not assume responsibility for quality, quantity, payment, or delivery.</li>
-<li>All transactions are governed by independent contracts between counterparties.</li>
-<li>Market information is indicative and non-binding.</li>
-</ul>
+GSTIN: <b>27AASFK4574H1ZR</b><br><br>
 
-<h3>Privacy Policy</h3>
-<ul>
-<li>Client contact information is collected strictly for business communication.</li>
-<li>Data is handled confidentially and not shared without consent.</li>
-<li>Reasonable safeguards are followed to protect business information.</li>
-</ul>
+📍 Mumbai, India<br>
+📞 +91 98200 29262<br><br>
 
-<div class="copy">
-© 2017–2026 KNG Commodities LLP. All Rights Reserved.
-</div>
-
+✉️ <a href="mailto:kngcommodities@gmail.com">kngcommodities@gmail.com</a><br>
+✉️ <a href="mailto:kngprasanna@gmail.com">kngprasanna@gmail.com</a>
+</p>
 </footer>
 
 </body>
