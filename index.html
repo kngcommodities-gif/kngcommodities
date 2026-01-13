@@ -9,6 +9,27 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
 body{background:#000;color:#fff;overflow-x:hidden}
 
+/* FIXED LOGO */
+.fixed-logo{
+  position:fixed;
+  top:22px;
+  left:28px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.fixed-logo img{
+  height:46px;
+  filter:drop-shadow(0 0 12px rgba(0,255,136,.6));
+}
+.fixed-logo span{
+  color:#00ff88;
+  font-size:1.1rem;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
 /* HERO */
 .hero{
 height:100vh;
@@ -20,7 +41,11 @@ align-items:center;
 justify-content:center;
 text-align:center;
 }
-.hero h1{font-size:4.3rem;letter-spacing:4px}
+.hero h1{
+font-size:4.4rem;
+letter-spacing:4px;
+text-shadow:0 0 25px rgba(0,255,136,.6);
+}
 .hero span{color:#00ff88}
 .hero p{margin-top:15px;font-size:1.25rem;opacity:.9}
 
@@ -28,13 +53,17 @@ text-align:center;
 .section{padding:80px 6%}
 h2{font-size:2.8rem;margin-bottom:30px}
 
-/* GLOW BOX */
+/* GLOW */
 .glow{
-border:1px solid rgba(0,255,136,.6);
-box-shadow:0 0 40px rgba(0,255,136,.45);
+border:1px solid rgba(0,255,136,.9);
+box-shadow:
+0 0 25px rgba(0,255,136,.6),
+0 0 60px rgba(0,255,136,.45),
+inset 0 0 15px rgba(0,255,136,.25);
 padding:35px;
 border-radius:16px;
 margin-bottom:60px;
+background:rgba(0,0,0,.55);
 }
 
 /* STORY */
@@ -79,7 +108,7 @@ transition:opacity 1s ease;
 }
 .slider img.active{opacity:1}
 
-/* LOGISTICS STRIP */
+/* LOGISTICS */
 .logistics{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -92,7 +121,7 @@ object-fit:cover;
 border-radius:10px;
 }
 
-/* STORY SCROLL ANIMATION */
+/* SCROLL STORY */
 .reveal{opacity:0;transform:translateY(90px);transition:1.2s ease}
 .reveal.show{opacity:1;transform:none}
 
@@ -108,6 +137,12 @@ footer a{color:#00ff88;text-decoration:none}
 </head>
 
 <body>
+
+<!-- FIXED LOGO -->
+<div class="fixed-logo">
+  <img src="images/kng-logo.png" alt="KNG Logo">
+  <span>KNG</span>
+</div>
 
 <!-- HERO -->
 <section class="hero reveal">
@@ -125,13 +160,8 @@ Import • Export • Trade Facilitation</p>
 <h2>Who We Are</h2>
 <p>
 Established in 2017, KNG Commodities LLP is a Mumbai-based
-commodity brokerage firm deeply embedded in fast-moving
-edible oil markets.  
-We operate where volumes are high, timing matters,
-and execution is everything.
-</p>
-<p style="margin-top:15px">
-<strong>Our job is simple:</strong> connect buyers & sellers and get the trade done.
+commodity brokerage firm operating in fast-moving edible oil markets.
+We connect buyers and sellers and ensure smooth trade execution.
 </p>
 </div>
 <img src="images/ship1.jpg">
@@ -145,7 +175,7 @@ and execution is everything.
 <div class="glow commodity reveal">
 <div>
 <h3>Crude Palm Oil (CPO)</h3>
-<p>High-volume crude palm oil traded from major global origins.</p>
+<p>High-volume crude palm oil sourced from global origins.</p>
 </div>
 <div class="slider" data-slider>
 <img src="images/palm1.jpg" class="active">
@@ -157,7 +187,7 @@ and execution is everything.
 <div class="glow commodity reveal">
 <div>
 <h3>RBD Palm Oil</h3>
-<p>Refined palm oil suitable for food and industrial applications.</p>
+<p>Refined palm oil for food and industrial applications.</p>
 </div>
 <div class="slider" data-slider>
 <img src="images/rbd1.jpg" class="active">
@@ -169,12 +199,12 @@ and execution is everything.
 <div class="glow commodity reveal">
 <div>
 <h3>Soybean Oil</h3>
-<p>Actively traded soybean oil across domestic & global markets.</p>
+<p>Actively traded soybean oil across domestic and global markets.</p>
 </div>
 <div class="slider" data-slider>
 <img src="images/soy1.jpg" class="active">
 <img src="images/soy2.jpg">
-<img src="images/container1.jpg">
+<img src="images/container2.jpg">
 </div>
 </div>
 
@@ -193,7 +223,7 @@ and execution is everything.
 <div class="glow commodity reveal">
 <div>
 <h3>Canola / Rapeseed Oil</h3>
-<p>Canola oil sourced from trusted international exporters.</p>
+<p>Canola oil sourced from trusted exporters.</p>
 </div>
 <div class="slider" data-slider>
 <img src="images/canola1.jpg" class="active">
@@ -226,15 +256,15 @@ and execution is everything.
 </div>
 </section>
 
-<!-- TERMS -->
+<!-- DISCLAIMER -->
 <section class="section">
 <div class="glow reveal">
 <h2>Broker Disclaimer</h2>
 <p>
 KNG Commodities LLP acts strictly as an independent trade intermediary.
 We do not buy, sell, store, transport or take ownership of goods.
-All pricing, quality, logistics, payment and market risks remain
-solely with the buyer and seller.
+All pricing, quality, logistics, payment and market risks
+remain solely with the buyer and seller.
 </p>
 </div>
 </section>
@@ -252,16 +282,16 @@ Mumbai, India<br>
 </footer>
 
 <script>
-// SCROLL STORY REVEAL
+// SCROLL STORY
 const reveals=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(entries=>{
 entries.forEach(e=>{
-if(e.isIntersecting) e.target.classList.add('show');
+if(e.isIntersecting)e.target.classList.add('show');
 });
 },{threshold:.25});
 reveals.forEach(r=>obs.observe(r));
 
-// SLIDER AUTO PLAY
+// SLIDER AUTO
 document.querySelectorAll('[data-slider]').forEach(slider=>{
 let slides=slider.querySelectorAll('img');
 let i=0;
