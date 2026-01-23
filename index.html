@@ -400,145 +400,143 @@ function toggleSpecs(id){
 }
 </script>
 
-<!-- ================= INDIA EDIBLE OIL MARKET REPORT ================= -->
+<!-- ================= INDIA EDIBLE OIL MARKET — PART 4A ================= -->
 <section class="section" id="market">
   <div class="glow">
 
-    <h2>India Edible Oil Market — Comprehensive Trade & Consumption Report</h2>
+    <h2>India Edible Oil Market — Supply Chain, Seasonality & Trade Flow</h2>
+
+    <!-- SLIDE 1 -->
+    <h3 style="color:#00ff88">1. India’s Edible Oil Demand Structure</h3>
+    <p>
+      India’s edible oil market is structurally import-dependent. Annual consumption
+      is estimated at <b>23–25 million metric tonnes</b>, whereas domestic oilseed
+      production supplies only a portion of this demand. The balance requirement is
+      fulfilled through imports.
+    </p>
+    <p>
+      This import dependency is not temporary. It is driven by population size,
+      food habits, limited land availability for oilseeds and yield variability due
+      to monsoon dependence.
+    </p>
+
+    <!-- SLIDE 2 -->
+    <h3 style="color:#00ff88;margin-top:35px">2. Primary Imported Oils & Origins</h3>
+    <p>
+      India imports multiple edible oils from diverse origins. Each oil has a
+      distinct origin pattern and seasonality.
+    </p>
+    <ul>
+      <li><b>Palm Oil</b> — Indonesia, Malaysia</li>
+      <li><b>Soybean Oil</b> — Argentina, Brazil</li>
+      <li><b>Sunflower Oil</b> — Ukraine, Russia, Black Sea region</li>
+    </ul>
+    <p>
+      Vessel arrivals depend on harvest cycles, export availability, freight markets
+      and geopolitical factors.
+    </p>
+
+    <!-- SLIDE 3 -->
+    <h3 style="color:#00ff88;margin-top:35px">3. Seasonal Import Pattern (Month-wise)</h3>
+    <p>
+      India’s edible oil imports follow a seasonal pattern rather than uniform
+      monthly distribution.
+    </p>
+
+    <ul>
+      <li><b>October – January</b>: Higher imports (festive demand, pipeline refill)</li>
+      <li><b>February – April</b>: Stable imports</li>
+      <li><b>May – July</b>: Slight moderation due to inventory drawdown</li>
+      <li><b>August – September</b>: Pre-festival buildup begins</li>
+    </ul>
 
     <p>
-      India is structurally dependent on imported edible oils. Despite being one of
-      the world’s largest producers of oilseeds, domestic production remains
-      insufficient to meet national demand. This imbalance has made India one of the
-      largest importers of edible oils globally.
+      Brokers and importers plan vessel arrivals based on these demand cycles to
+      avoid congestion and excess inventory.
+    </p>
+
+    <!-- SLIDE 4 -->
+    <h3 style="color:#00ff88;margin-top:35px">4. Annual Import Volumes — Indicative</h3>
+    <p>
+      On an annual basis, India imports approximately <b>15–16 million metric tonnes</b>
+      of edible oils. Palm oil contributes the largest share, followed by soybean
+      and sunflower oils.
     </p>
 
     <p>
-      The country’s edible oil demand is driven by a combination of population growth,
-      changing dietary habits, urbanisation and the rapid expansion of the food
-      processing and hospitality sectors. As incomes rise and consumption patterns
-      evolve, per-capita edible oil consumption has shown a steady upward trend.
+      Import volumes fluctuate year-to-year based on global supply, freight costs,
+      domestic price controls and policy interventions.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= INDIA EDIBLE OIL MARKET — PART 4B ================= -->
+<section class="section">
+  <div class="glow">
+
+    <!-- SLIDE 5 -->
+    <h3 style="color:#00ff88">5. Port-wise Import Distribution (Indicative)</h3>
+    <p>
+      India’s edible oil imports are concentrated across a few strategic ports.
+      Western coast ports dominate due to proximity to origins and refinery clusters.
+    </p>
+
+    <table style="width:100%;margin-top:15px">
+      <tr><th style="color:#00ff88;text-align:left">Port</th><th>Estimated Share</th></tr>
+      <tr><td>Mundra Port</td><td>35–40%</td></tr>
+      <tr><td>Kandla (Deendayal)</td><td>25–30%</td></tr>
+      <tr><td>JNPT / Nhava Sheva</td><td>15–20%</td></tr>
+      <tr><td>Other Ports</td><td>10–15%</td></tr>
+    </table>
+
+    <p style="margin-top:12px">
+      Actual volumes vary annually depending on freight economics, tank availability
+      and refinery demand.
+    </p>
+
+    <!-- SLIDE 6 -->
+    <h3 style="color:#00ff88;margin-top:45px">6. Stock Holding & Inventory Logic</h3>
+    <p>
+      Edible oil stocks in India are held across multiple levels:
+    </p>
+    <ul>
+      <li>Port-side tank farms</li>
+      <li>Refinery storage tanks</li>
+      <li>Inland depots & distribution hubs</li>
+    </ul>
+
+    <p>
+      Typical national stock coverage ranges between <b>30–45 days</b>, depending on
+      import pipeline, demand season and price outlook.
+    </p>
+
+    <!-- SLIDE 7 -->
+    <h3 style="color:#00ff88;margin-top:45px">7. Monthly Import Pattern — Visual</h3>
+
+    <canvas id="monthlyChart" height="140"></canvas>
+
+    <p style="margin-top:10px;font-size:0.95rem">
+      <span style="color:#00ff88"><b>Green</b></span> indicates peak inflow months,
+      while <span style="color:#ff5c5c"><b>Red</b></span> reflects lean periods.
+    </p>
+
+    <!-- SLIDE 8 -->
+    <h3 style="color:#00ff88;margin-top:45px">8. Role of Brokers in Managing Flow & Risk</h3>
+    <p>
+      Brokers play a critical role in aligning vessel schedules, port selection,
+      quality parameters and contract execution. This coordination helps mitigate
+      congestion risk, demurrage exposure and quality disputes.
     </p>
 
     <p>
-      Currently, India consumes approximately <b>23–25 million metric tonnes</b> of
-      edible oils annually, while domestic production contributes only a part of this
-      requirement. The resulting supply gap is met through imports of palm oil,
-      soybean oil, sunflower oil and other soft oils.
+      KNG Commodities LLP operates strictly as a broker-only intermediary and does not
+      assume ownership, storage or financial exposure.
     </p>
 
-    <!-- ================= INTERACTIVE IMPORT CHART ================= -->
-    <div style="margin-top:45px">
-      <h3 style="color:#00ff88">India — Year-wise Edible Oil Imports (Million MT)</h3>
-      <canvas id="importChart" height="130"></canvas>
-
-      <p id="yearInsight" style="margin-top:14px;font-size:0.95rem">
-        <span style="color:#00ff88"><b>Green</b></span> indicates stable growth periods, while
-        <span style="color:#ff5c5c"><b>Red</b></span> highlights stress years impacted by global
-        supply disruptions, freight volatility or policy changes.
-      </p>
-    </div>
-
-    <!-- ================= MARKET INTERPRETATION ================= -->
-    <div style="margin-top:50px">
-      <h3 style="color:#00ff88">Market Interpretation & Risk Indicators</h3>
-
-      <p>
-        Import volumes have generally increased year-on-year, reflecting the
-        structural nature of India’s dependence on global edible oil markets.
-        However, certain years witnessed stress due to supply chain disruptions,
-        geopolitical developments and freight market volatility.
-      </p>
-
-      <p style="color:#00ff88">
-        ● Growth years indicate stable supply chains, predictable freight availability
-        and smooth execution across ports.
-      </p>
-
-      <p style="color:#ff5c5c">
-        ● Stress years reflect higher landed costs, port congestion, longer vessel
-        turnaround times and increased execution risk.
-      </p>
-
-      <p>
-        These dynamics underline the importance of disciplined trade execution,
-        contract clarity and experienced brokerage support in physical commodity
-        markets.
-      </p>
-    </div>
-
-    <!-- ================= PORTS & LOGISTICS ================= -->
-    <div style="margin-top:55px">
-      <h3 style="color:#00ff88">Ports, Logistics & Inland Movement</h3>
-
-      <p>
-        India’s edible oil imports are concentrated around key western coast ports,
-        which offer proximity to major producing origins and established refinery
-        infrastructure. Efficient port operations are critical to controlling landed
-        cost and ensuring timely availability of cargo.
-      </p>
-
-      <ul>
-        <li><b>Mundra Port</b> — Major hub for bulk liquid cargoes with integrated tank farms.</li>
-        <li><b>Kandla (Deendayal Port)</b> — Handles significant volumes for northern India.</li>
-        <li><b>JNPT / Nhava Sheva</b> — Supports containerised edible oil movements.</li>
-      </ul>
-
-      <p>
-        Post-discharge, cargoes move through container yards and inland logistics hubs
-        before reaching refineries and processing units. Coordination across these
-        stages directly impacts demurrage exposure and supply continuity.
-      </p>
-    </div>
-
-    <!-- ================= BIG IMAGES ================= -->
-    <div style="margin-top:45px">
-      <img src="images/container_yard.jpg"
-           style="width:100%;height:420px;object-fit:cover;border-radius:20px;
-           box-shadow:0 0 60px rgba(0,255,136,.55)">
-    </div>
-
-    <div style="margin-top:55px">
-      <h3 style="color:#00ff88">Processing, Refining & Domestic Consumption</h3>
-
-      <p>
-        Refineries and processing plants form the backbone of India’s edible oil
-        ecosystem. Imported crude oils are refined, stabilised and blended to meet
-        domestic quality and regulatory requirements before distribution.
-      </p>
-
-      <p>
-        With annual consumption exceeding domestic production, uninterrupted imports
-        are essential to prevent shortages and price volatility. Processing capacity
-        and logistics efficiency therefore play a strategic role in national food
-        security.
-      </p>
-
-      <img src="images/processing_plant.jpg"
-           style="width:100%;height:420px;object-fit:cover;border-radius:20px;
-           box-shadow:0 0 60px rgba(0,255,136,.55);margin-top:18px">
-    </div>
-
-    <!-- ================= BROKER ROLE ================= -->
-    <div style="margin-top:55px">
-      <h3 style="color:#00ff88">Role of Brokerage in India’s Edible Oil Trade</h3>
-
-      <p>
-        Brokerage firms act as neutral facilitators in physical trade, ensuring that
-        contractual obligations align with execution realities. This includes quality
-        specifications, shipment windows, inspection protocols and documentation flow.
-      </p>
-
-      <p>
-        KNG Commodities LLP operates strictly as a broker-only intermediary and does
-        not assume ownership, storage, logistics or financial exposure in any
-        transaction.
-      </p>
-    </div>
-
-    <!-- ================= DATA SOURCES ================= -->
+    <!-- SOURCES -->
     <div style="
-      margin-top:55px;
+      margin-top:50px;
       font-size:0.9rem;
       opacity:0.85;
       border-top:1px dashed rgba(0,255,136,.4);
@@ -555,7 +553,7 @@ function toggleSpecs(id){
   </div>
 </section>
 
-<!-- ================= AI DISCLAIMER ================= -->
+<!-- AI DISCLAIMER -->
 <div style="
 position:fixed;
 bottom:8px;
@@ -564,46 +562,31 @@ font-size:0.7rem;
 opacity:0.45;
 pointer-events:none;
 ">
-*This report contains AI-assisted analytical content and indicative visual representations.
+*This section contains AI-assisted analytical content and indicative market representations.
 </div>
 
-<!-- ================= CHART JS ================= -->
+<!-- MONTHLY CHART -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-const years = ['2019','2020','2021','2022','2023'];
-const values = [13.5, 14.0, 14.8, 15.3, 15.9];
-
-const ctx = document.getElementById('importChart').getContext('2d');
-const chart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: years,
-    datasets: [{
-      data: values,
-      borderColor: '#00ff88',
-      backgroundColor: 'rgba(0,255,136,.18)',
-      tension: 0.35,
-      pointRadius: 6,
-      pointHoverRadius: 9,
-      pointBackgroundColor: values.map(v => v < 14.2 ? '#ff5c5c' : '#00ff88'),
-      fill: true
+const mctx = document.getElementById('monthlyChart').getContext('2d');
+new Chart(mctx,{
+  type:'bar',
+  data:{
+    labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    datasets:[{
+      data:[1.4,1.3,1.3,1.2,1.1,1.0,1.0,1.1,1.2,1.4,1.5,1.5],
+      backgroundColor:[
+        '#00ff88','#00ff88','#00ff88','#00ff88',
+        '#ff5c5c','#ff5c5c','#ff5c5c',
+        '#00ff88','#00ff88','#00ff88','#00ff88','#00ff88'
+      ]
     }]
   },
-  options: {
+  options:{
     plugins:{legend:{display:false}},
-    onClick:(e,el)=>{
-      if(el.length){
-        const i = el[0].index;
-        document.getElementById('yearInsight').innerHTML =
-        `<b>${years[i]}</b> : Imports ~ <b>${values[i]} MMT</b> — 
-        <span style="color:${values[i] < 14.2 ? '#ff5c5c' : '#00ff88'}">
-        ${values[i] < 14.2 ? 'Stress / volatility period' : 'Stable growth period'}
-        </span>`;
-      }
-    },
     scales:{
       y:{ticks:{color:'#ccc'},grid:{color:'rgba(255,255,255,.08)'}},
-      x:{ticks:{color:'#ccc'},grid:{color:'rgba(255,255,255,.08)'}}
+      x:{ticks:{color:'#ccc'},grid:{display:false}}
     }
   }
 });
