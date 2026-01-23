@@ -2,110 +2,180 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>KNG Commodities LLP</title>
+<title>KNG Commodities LLP | International Edible Oil Brokerage</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+/* ========== GLOBAL RESET ========== */
 *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,system-ui,sans-serif}
 body{background:#000;color:#fff;overflow-x:hidden}
 
-/* LOGO (DESKTOP ONLY) */
+/* ========== LOGO (DESKTOP ONLY) ========== */
 .logo{
 position:fixed;
 top:22px;
-left:26px;
+left:28px;
 z-index:9999;
 }
 .logo img{
-height:90px;
-filter:drop-shadow(0 0 22px rgba(0,255,136,.9));
+height:95px;
+filter:drop-shadow(0 0 26px rgba(0,255,136,.95));
 }
 @media(max-width:768px){
 .logo{display:none}
 }
 
-/* HERO */
+/* ========== HERO ========== */
 .hero{
 min-height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.92)),
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.92)),
 url("images/hero-cover.jpg") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:0 6%;
+padding:0 2%;
 }
 
-/* MASTER GLASS BOX */
-.master-box{
+/* ========== MAIN GLASS BOX (WIDE) ========== */
+.main-box{
 width:100%;
-max-width:1200px;
-background:rgba(0,0,0,.45);
-backdrop-filter:blur(10px);
+max-width:1800px;
+background:rgba(0,0,0,.48);
+backdrop-filter:blur(12px);
 border:1px solid rgba(0,255,136,.6);
-border-radius:26px;
+border-radius:28px;
 box-shadow:
-0 0 70px rgba(0,255,136,.65),
-inset 0 0 35px rgba(0,255,136,.25);
-padding:55px;
+0 0 90px rgba(0,255,136,.65),
+inset 0 0 40px rgba(0,255,136,.25);
+padding:70px;
 }
 
-/* TITLE */
-.master-box h1{
+/* ========== TITLE ========== */
+.main-box h1{
 text-align:center;
-font-size:4.5rem;
+font-size:4.8rem;
 color:#00ff88;
-text-shadow:0 0 45px rgba(0,255,136,.85);
+text-shadow:0 0 55px rgba(0,255,136,.9);
 }
-.master-box p.sub{
+.sub{
 text-align:center;
-margin-top:18px;
-font-size:1.3rem;
+margin-top:20px;
+font-size:1.35rem;
 opacity:.95;
+line-height:1.7;
 }
 
-/* TABS */
+/* ========== TABS ========== */
 .tabs{
 display:flex;
 justify-content:center;
 gap:18px;
-margin-top:45px;
+margin-top:50px;
 flex-wrap:wrap;
 }
 .tabs button{
-padding:15px 32px;
-border-radius:32px;
+padding:16px 36px;
+border-radius:36px;
 border:1px solid #00ff88;
-background:rgba(0,0,0,.6);
+background:rgba(0,0,0,.65);
 color:#00ff88;
 cursor:pointer;
 font-size:15px;
-transition:.3s;
+transition:.35s;
 }
 .tabs button.active,
 .tabs button:hover{
 background:#00ff88;
 color:#000;
-box-shadow:0 0 32px rgba(0,255,136,.9);
+box-shadow:0 0 36px rgba(0,255,136,.95);
 }
 
-/* TAB CONTENT */
+/* ========== TAB CONTENT ========== */
 .tab-content{
-margin-top:45px;
+margin-top:55px;
 display:none;
 animation:fade .45s ease;
 }
 .tab-content.active{display:block}
 
 @keyframes fade{
-from{opacity:0;transform:translateY(14px)}
+from{opacity:0;transform:translateY(18px)}
 to{opacity:1;transform:none}
 }
 
-/* RESPONSIVE */
+/* ========== TYPOGRAPHY ========== */
+h2{color:#00ff88;margin-bottom:18px;font-size:2.6rem}
+h3{color:#00ff88;margin-top:28px;margin-bottom:12px}
+p{line-height:2.1;margin-bottom:20px;font-size:1.08rem;opacity:.95}
+
+/* ========== PRODUCTS GRID ========== */
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:36px;
+margin-top:40px;
+}
+.product{
+background:rgba(0,0,0,.55);
+border:1px solid rgba(0,255,136,.6);
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 0 35px rgba(0,255,136,.45);
+cursor:pointer;
+transition:.4s;
+}
+.product img{
+width:100%;
+height:190px;
+object-fit:cover;
+}
+.product h3{
+padding:18px;
+color:#00ff88;
+}
+.product .details{
+max-height:0;
+overflow:hidden;
+padding:0 18px;
+transition:max-height .6s ease,padding .4s ease;
+border-top:1px solid rgba(0,255,136,.35);
+}
+.product:hover .details{
+max-height:650px;
+padding:18px;
+}
+.product table{
+width:100%;
+border-collapse:collapse;
+margin-top:12px;
+}
+.product th,.product td{
+padding:10px;
+border-bottom:1px solid rgba(255,255,255,.15);
+}
+.product th{
+color:#00ff88;
+text-align:left;
+width:45%;
+}
+
+/* ========== MOBILE ========== */
 @media(max-width:900px){
-.master-box h1{font-size:3.2rem}
-.master-box{padding:38px}
+.main-box{padding:45px}
+.main-box h1{font-size:3.2rem}
+}
+@media(max-width:768px){
+.product:hover .details{max-height:0;padding:0}
+.product.active .details{max-height:650px;padding:18px}
+}
+
+/* ========== FOOTER PLACEHOLDER ========== */
+.footer-note{
+margin-top:40px;
+font-size:.85rem;
+opacity:.6;
+text-align:center;
 }
 </style>
 </head>
@@ -117,489 +187,365 @@ to{opacity:1;transform:none}
   <img src="images/kng-logo.png" alt="KNG Commodities LLP">
 </div>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="master-box">
+<div class="main-box">
 
-    <h1>KNG Commodities LLP</h1>
-    <p class="sub">
-      International Edible Oil & Commodity Brokerage<br>
-      Import • Export • Physical Trade Facilitation
-    </p>
+<h1>KNG Commodities LLP</h1>
+<p class="sub">
+International Edible Oil & Commodity Brokerage<br>
+Import • Export • Physical Trade Facilitation
+</p>
 
-    <!-- TABS -->
-    <div class="tabs">
-      <button class="active" onclick="openTab('about',this)">About Company</button>
-      <button onclick="openTab('director',this)">Director</button>
-      <button onclick="openTab('products',this)">Products</button>
-      <button onclick="openTab('market',this)">Market Report</button>
-      <button onclick="openTab('contact',this)">Contact</button>
-    </div>
+<!-- TABS -->
+<div class="tabs">
+  <button class="active" onclick="openTab('about',this)">About Company</button>
+  <button onclick="openTab('director',this)">Director</button>
+  <button onclick="openTab('products',this)">Products</button>
+  <button onclick="openTab('market',this)">Market Report</button>
+  <button onclick="openTab('contact',this)">Contact</button>
+</div>
 
-    <!-- CONTENT PLACEHOLDERS (FULL CONTENT AAYEGA NEXT PARTS ME) -->
-    <div class="tab-content active" id="about"></div>
-    <div class="tab-content" id="director"></div>
-    <div class="tab-content" id="products"></div>
-    <div class="tab-content" id="market"></div>
-    <div class="tab-content" id="contact"></div>
-
-  </div>
-</section>
-
-<script>
-function openTab(id,btn){
-  document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-
-  document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-}
-</script>
-
-</body>
-</html>
-
-<script>
-/* ================= PART 2 AUTO-FILL ================= */
-
-document.getElementById('about').innerHTML = `
-<h2 style="color:#00ff88">About KNG Commodities LLP</h2>
+<!-- ========== ABOUT ========== -->
+<div class="tab-content active" id="about">
+<h2>About KNG Commodities LLP</h2>
 
 <p>
 KNG Commodities LLP is a Mumbai-based international edible oil and commodity brokerage firm,
-operating continuously since <b>2017</b>. The firm functions strictly as a broker-only
-intermediary, facilitating physical trade between buyers and sellers across domestic and
-international markets.
+operating continuously since <b>2017</b>. Over the years, the firm has developed a strong
+presence within India’s edible oil import and distribution ecosystem, where execution
+discipline, market knowledge and long-term credibility are essential.
 </p>
 
 <p>
-Since inception, KNG Commodities LLP has focused on disciplined execution, transparent
-communication and market-aligned trade facilitation. The firm does not take ownership of goods,
-does not store inventory, and does not assume logistics or financial exposure in any transaction.
+The company was founded with a clear objective — to act as a professional, transparent and
+risk-neutral intermediary connecting buyers and sellers across domestic and international
+markets. In an industry characterised by price volatility, logistical complexity and
+tight execution timelines, KNG Commodities LLP places strong emphasis on clarity,
+consistency and operational feasibility.
 </p>
 
 <p>
-Over the years, the firm has actively worked with reputed multinational and Indian organizations
-including <b>Viterra India</b>, <b>Bunge India</b>, <b>Adani Group</b>, <b>Tata Group</b> and
-<b>COFCO International</b>, along with a wide network of established local refiners, importers,
-processors and institutional buyers.
+KNG Commodities LLP operates strictly as a <b>broker-only intermediary</b>. The firm does not
+buy, sell, store, transport or finance goods, nor does it assume price, quality,
+inventory or logistics risk. All trades are executed directly between contracting parties
+based on mutually agreed contractual terms.
 </p>
 
 <p>
-KNG Commodities LLP operates at the centre of India’s edible oil import ecosystem, closely linked
-to major ports, refineries, tank farms and processing hubs. Its brokerage model emphasizes
-execution feasibility, specification clarity and alignment between contractual terms and
-real-world logistics.
+Since inception, the firm has worked with a wide spectrum of market participants including
+domestic refiners, processors, bulk consumers and multinational trading houses. Over time,
+the firm has been associated with reputed organisations such as <b>Viterra India</b>,
+<b>Bunge India</b>, <b>Adani Group</b>, <b>Tata Group</b> and <b>COFCO International</b>,
+along with several established Indian market participants.
 </p>
 
 <p>
-The firm’s core operating philosophy is simple: act as a neutral intermediary, protect execution
-integrity, and facilitate trades that are commercially sound and operationally executable.
+With strong industry relationships, practical market understanding and a disciplined
+approach to execution, KNG Commodities LLP continues to act as a reliable bridge between
+global suppliers and domestic buyers in India’s edible oil market.
 </p>
+</div>
 
-<p style="margin-top:18px">
-<b>Core Focus Areas:</b>
-<ul>
-  <li>Edible oil brokerage (Palm Oil, Soybean Oil, Sunflower Oil and Soft Oils)</li>
-  <li>Import and export trade facilitation</li>
-  <li>Physical execution coordination</li>
-  <li>Specification alignment and contract clarity</li>
-</ul>
-</p>
-`;
-
-document.getElementById('director').innerHTML = `
-<h2 style="color:#00ff88">Founder & Director</h2>
+<!-- ========== DIRECTOR ========== -->
+<div class="tab-content" id="director">
+<h2>Founder & Director</h2>
 
 <p>
-<b>Nimesh Ashok Galia</b><br>
-Founder & Director — KNG Commodities LLP
+<b>Nimesh Ashok Galia</b>, Founder & Director of KNG Commodities LLP, brings over
+<b>20+ years of hands-on experience</b> in the edible oil trade.
 </p>
 
 <p>
-With over <b>20+ years of hands-on experience</b> in the edible oil trade, Nimesh Galia has
-operated across multiple market cycles covering domestic trading, international imports,
-bulk cargo execution and containerised movements.
+His professional experience spans domestic trading, international imports, bulk cargo
+execution, containerised movements and refinery-linked trade flows. He has worked closely
+with refiners, importers, exporters, inspection agencies and logistics providers across
+India and overseas markets.
 </p>
 
 <p>
-His experience spans the complete physical trade lifecycle — from price discovery and
-negotiation to shipment scheduling, quality specifications, inspection protocols, port
-discharge coordination and settlement alignment.
+Known for his execution-focused approach and strong market relationships, Mr. Galia has
+built long-standing credibility within the industry. Under his leadership, KNG
+Commodities LLP has grown into a respected brokerage firm recognised for professionalism,
+transparent communication and execution reliability.
 </p>
+</div>
+
+<!-- ========== PRODUCTS (FULL SPECS) ========== -->
+<div class="tab-content" id="products">
+<h2>Products & Trade Specifications</h2>
 
 <p>
-Under his leadership, KNG Commodities LLP has built a reputation for disciplined brokerage,
-clear communication and reliable execution support. His long-standing industry relationships
-and market insight continue to guide the firm’s strategic direction.
+KNG Commodities LLP facilitates physical trade in major edible oils that form the backbone
+of India’s import and consumption ecosystem. All products are traded strictly on a
+broker-only basis and follow internationally accepted contract standards.
 </p>
 
+<div class="product-grid">
+
+<div class="product">
+<img src="images/palm.jpg">
+<h3>Crude Palm Oil (CPO)</h3>
+<div class="details">
 <p>
-The leadership philosophy remains execution-first and risk-aware, ensuring that facilitated
-trades are aligned with physical market realities rather than speculative assumptions.
+Crude Palm Oil is the largest imported edible oil into India, primarily sourced from
+Indonesia and Malaysia and used extensively by refineries.
 </p>
-`;
-</script>
+<table>
+<tr><th>Contract</th><td>FOSFA 80 / 81</td></tr>
+<tr><th>FFA</th><td>Max 4.5%</td></tr>
+<tr><th>Moisture & Impurities</th><td>Max 0.50%</td></tr>
+<tr><th>Usage</th><td>Refining & Processing</td></tr>
+</table>
+</div>
+</div>
 
-<script>
-/* ================= PART 3 AUTO-FILL (PRODUCTS) ================= */
-
-document.getElementById('products').innerHTML = `
-<h2 style="color:#00ff88">Products & Trade Specifications</h2>
-
+<div class="product">
+<img src="images/rbd.jpg">
+<h3>RBD Palmolein</h3>
+<div class="details">
 <p>
-KNG Commodities LLP actively facilitates physical trade in major edible oils that form
-the backbone of India’s import and consumption ecosystem. Each product traded follows
-international contract standards and market-accepted quality parameters.
+RBD Palmolein is a refined palm oil widely consumed across households, food service and
+FMCG segments.
 </p>
+<table>
+<tr><th>FFA (Palmitic)</th><td>Max 0.1%</td></tr>
+<tr><th>Moisture & Impurities</th><td>Max 0.1%</td></tr>
+<tr><th>Iodine Value</th><td>Min 56</td></tr>
+<tr><th>Melting Point</th><td>Max 24°C</td></tr>
+</table>
+</div>
+</div>
 
-<div class="product-wrap">
+<div class="product">
+<img src="images/soy.jpg">
+<h3>Crude Degummed Soybean Oil</h3>
+<div class="details">
+<p>
+Imported mainly from South American origins and used for refining and blending.
+</p>
+<table>
+<tr><th>Contract</th><td>FOSFA 54 / ANEC 81</td></tr>
+<tr><th>FFA (Oleic)</th><td>Max 1.0%</td></tr>
+<tr><th>Moisture & Volatile</th><td>Max 0.20%</td></tr>
+<tr><th>Insoluble Impurities</th><td>Max 0.10%</td></tr>
+</table>
+</div>
+</div>
 
-  <!-- PRODUCT 1 -->
-  <div class="product-card">
-    <div class="product-head">
-      <img src="images/palm.jpg">
-      <h3>Crude Palm Oil (CPO)</h3>
-    </div>
-    <div class="product-body">
-      <p>
-        Crude Palm Oil is the most widely imported edible oil into India. It is sourced
-        primarily from Indonesia and Malaysia and is used extensively in refining and
-        food processing industries.
-      </p>
-      <table>
-        <tr><th>Contract</th><td>FOSFA 80 / 81</td></tr>
-        <tr><th>FFA</th><td>Max 4.5%</td></tr>
-        <tr><th>Moisture & Impurities</th><td>Max 0.50%</td></tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- PRODUCT 2 -->
-  <div class="product-card">
-    <div class="product-head">
-      <img src="images/rbd.jpg">
-      <h3>RBD Palmolein</h3>
-    </div>
-    <div class="product-body">
-      <p>
-        RBD Palmolein is a refined and deodorised palm oil widely consumed in Indian
-        households and food service segments. It offers stable quality and wide
-        application across packaged foods.
-      </p>
-      <table>
-        <tr><th>FFA (Palmitic)</th><td>Max 0.1%</td></tr>
-        <tr><th>Moisture & Impurities</th><td>Max 0.1%</td></tr>
-        <tr><th>Iodine Value</th><td>Min 56</td></tr>
-        <tr><th>Melting Point</th><td>Max 24°C</td></tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- PRODUCT 3 -->
-  <div class="product-card">
-    <div class="product-head">
-      <img src="images/soy.jpg">
-      <h3>Crude Degummed Soybean Oil</h3>
-    </div>
-    <div class="product-body">
-      <p>
-        Soybean oil is an important soft oil imported into India, primarily from South
-        American origins. It is used both for direct consumption and blending.
-      </p>
-      <table>
-        <tr><th>Contract</th><td>FOSFA 54 / ANEC 81</td></tr>
-        <tr><th>FFA (Oleic)</th><td>Max 1.0%</td></tr>
-        <tr><th>Moisture & Volatile</th><td>Max 0.20%</td></tr>
-        <tr><th>Insoluble Impurities</th><td>Max 0.10%</td></tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- PRODUCT 4 -->
-  <div class="product-card">
-    <div class="product-head">
-      <img src="images/sunflower.jpg">
-      <h3>Crude Sunflower Oil</h3>
-    </div>
-    <div class="product-body">
-      <p>
-        Sunflower oil is imported mainly from the Black Sea region and is preferred for
-        its light taste and consumer acceptance in premium segments.
-      </p>
-      <table>
-        <tr><th>Contract</th><td>FOSFA 54</td></tr>
-        <tr><th>FFA</th><td>Basis 2% (Up to 3% allowable)</td></tr>
-        <tr><th>Moisture & Impurities</th><td>Max 0.50%</td></tr>
-      </table>
-    </div>
-  </div>
+<div class="product">
+<img src="images/sunflower.jpg">
+<h3>Crude Sunflower Oil</h3>
+<div class="details">
+<p>
+Imported primarily from the Black Sea region and preferred for its light taste.
+</p>
+<table>
+<tr><th>Contract</th><td>FOSFA 54</td></tr>
+<tr><th>FFA</th><td>Basis 2% (Up to 3% allowable)</td></tr>
+<tr><th>Moisture & Impurities</th><td>Max 0.50%</td></tr>
+</table>
+</div>
+</div>
 
 </div>
-`;
-</script>
+</div>
 
-<style>
-/* PRODUCT STYLES */
-.product-wrap{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
-margin-top:35px;
-}
-
-.product-card{
-background:rgba(0,0,0,.55);
-border:1px solid rgba(0,255,136,.6);
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 0 30px rgba(0,255,136,.4);
-transition:.4s;
-cursor:pointer;
-}
-
-.product-head img{
-width:100%;
-height:160px;
-object-fit:cover;
-}
-.product-head h3{
-padding:16px;
-color:#00ff88;
-}
-
-.product-body{
-max-height:0;
-overflow:hidden;
-padding:0 18px;
-transition:max-height .5s ease, padding .4s ease;
-}
-
-.product-card:hover .product-body{
-max-height:500px;
-padding:18px;
-}
-
-.product-body table{
-width:100%;
-margin-top:12px;
-border-collapse:collapse;
-font-size:.9rem;
-}
-.product-body th,.product-body td{
-padding:8px;
-border-bottom:1px solid rgba(255,255,255,.15);
-}
-.product-body th{color:#00ff88;text-align:left}
-
-/* MOBILE TAP SUPPORT */
-@media(max-width:768px){
-.product-card:hover .product-body{max-height:0;padding:0}
-.product-card.active .product-body{max-height:500px;padding:18px}
-}
-</style>
-
-<script>
-/* MOBILE TAP EXPAND */
-document.querySelectorAll('.product-card').forEach(card=>{
-card.addEventListener('click',()=>{
-  if(window.innerWidth<=768){
-    card.classList.toggle('active');
-  }
-});
-});
-</script>
-
-<!-- ================= PART 4 AUTO-FILL (MARKET REPORT) ================= -->
-<script>
-document.getElementById('market').innerHTML = `
-<h2 style="color:#00ff88">India Edible Oil Market — Trade, Stocks & Consumption (Industry Report)</h2>
+<!-- ========== MARKET (PART 2) ========== -->
+<div class="tab-content" id="market">
+<h2>India Edible Oil Market — Imports, Storage & Processing</h2>
 
 <p>
-India is one of the world’s largest consumers and importers of edible oils. The country’s
-annual edible oil consumption is estimated at <b>23–25 million metric tonnes</b>, while
-domestic oilseed production supplies only a part of this requirement. This structural
-gap is met through sustained imports, making edible oil trade a permanent feature of
-India’s food supply chain rather than a short-term imbalance.
+India is one of the world’s largest consumers and importers of edible oils. Despite being a
+major agricultural economy, domestic oilseed production is structurally insufficient to
+meet national demand. As a result, edible oil imports form a permanent and essential
+component of India’s food supply chain rather than a temporary imbalance.
 </p>
 
 <p>
-India’s import dependency is driven by population growth, changing dietary patterns,
-urbanisation and limited availability of arable land for oilseed expansion. As a result,
-global edible oil markets, freight movements and port logistics directly influence
-domestic price stability and availability.
+India’s annual edible oil consumption is estimated at <b>23–25 million metric tonnes</b>.
+Domestic production supplies only a part of this requirement, and the balance is met
+through imports of palm oil, soybean oil and sunflower oil. This structural dependency
+makes India highly sensitive to global price movements, freight costs, currency volatility
+and geopolitical developments.
 </p>
 
-<hr style="border-color:rgba(0,255,136,.3);margin:30px 0">
+<hr style="border-color:rgba(0,255,136,.35);margin:35px 0">
 
-<h3 style="color:#00ff88">1. Origins, Vessel Flow & Import Routes</h3>
+<h3>1. Import Origins & Vessel Movement</h3>
 
 <p>
-India imports edible oils from multiple origins depending on oil type. Palm oil is
-predominantly sourced from Indonesia and Malaysia, soybean oil from Argentina and
-Brazil, and sunflower oil from the Black Sea region including Ukraine and Russia.
+Palm oil imports are predominantly sourced from Indonesia and Malaysia, soybean oil from
+South America (Argentina and Brazil), and sunflower oil from the Black Sea region. These
+cargoes arrive through a mix of bulk vessels and containerised shipments depending on
+origin, contract structure and port infrastructure.
 </p>
 
 <p>
-Vessels typically arrive on the western coast of India due to geographical proximity,
-shorter sailing time and the presence of integrated liquid handling infrastructure.
-Vessel size, discharge rate and berth availability play a critical role in determining
-execution efficiency.
+India’s western coastline handles the majority of edible oil imports due to shorter
+sailing times, deeper drafts and the presence of integrated liquid handling facilities.
+Vessel scheduling, berth availability and discharge rates play a critical role in
+execution efficiency and inventory planning.
 </p>
 
-<img src="images/ship_mundra.jpg" style="width:100%;height:360px;object-fit:cover;border-radius:20px;
-box-shadow:0 0 55px rgba(0,255,136,.55);margin:22px 0">
+<hr style="border-color:rgba(0,255,136,.35);margin:40px 0">
 
-<h3 style="color:#00ff88">2. Annual Import Trend (Indicative, Realistic)</h3>
+<h3>2. Container Yards, Tank Farms & Stock Holding</h3>
 
 <p>
-India’s edible oil imports have shown a steady upward trend over the last several years,
-reflecting sustained demand growth. Temporary slowdowns are generally linked to policy
-interventions, price controls or global supply disruptions rather than demand weakness.
+Once discharged at ports, edible oils are stored in port-side tank farms, bonded warehouses
+and container yards before onward movement to refineries and inland consumption centres.
+Container yards act as a critical buffer between port discharge and inland logistics,
+especially for containerised imports.
 </p>
 
-<canvas id="annualImportChart" height="130"></canvas>
-
-<p style="font-size:0.95rem;margin-top:12px">
-<b style="color:#00ff88">Green trend</b> indicates demand-driven growth, while
-<b style="color:#ff5c5c">red dips</b> represent stress periods due to freight volatility
-or supply disruptions.
-</p>
-
-<hr style="border-color:rgba(0,255,136,.3);margin:40px 0">
-
-<h3 style="color:#00ff88">3. Port-wise Stock Holding & Distribution</h3>
+<img src="images/container_yard.jpg"
+style="width:100%;height:360px;object-fit:cover;border-radius:22px;
+box-shadow:0 0 60px rgba(0,255,136,.6);margin:25px 0">
 
 <p>
-Edible oil stocks in India are strategically held across port-side tank farms, inland
-container yards and refinery storage tanks. Western ports dominate stock holding due to
-their proximity to import origins and refining clusters.
+Ports such as Mundra, Kandla and JNPT collectively account for a significant share of India’s
+edible oil stockholding. These ports are strategically linked to refinery clusters and
+high-consumption regions across North and Western India.
 </p>
 
-<table style="width:100%;margin-top:15px;border-collapse:collapse">
-<tr><th style="color:#00ff88;text-align:left">Port</th><th>Estimated Annual Share</th><th>Stock Holding Role</th></tr>
-<tr><td>Mundra</td><td>35–40%</td><td>Primary bulk liquid hub & refinery linkage</td></tr>
-<tr><td>Kandla</td><td>25–30%</td><td>Northern India supply & tank farms</td></tr>
-<tr><td>JNPT</td><td>15–20%</td><td>Containerised imports & distribution</td></tr>
+<table style="width:100%;border-collapse:collapse;margin-top:18px">
+<tr>
+  <th style="color:#00ff88;text-align:left">Port</th>
+  <th>Estimated Import Share</th>
+  <th>Primary Role</th>
+</tr>
+<tr>
+  <td>Mundra</td>
+  <td>35–40%</td>
+  <td>Bulk liquid handling & refinery linkage</td>
+</tr>
+<tr>
+  <td>Kandla</td>
+  <td>25–30%</td>
+  <td>Northern India distribution & tank farms</td>
+</tr>
+<tr>
+  <td>JNPT</td>
+  <td>15–20%</td>
+  <td>Containerised imports & inland supply</td>
+</tr>
 </table>
 
-<img src="images/container_yard.jpg" style="width:100%;height:360px;object-fit:cover;border-radius:20px;
-box-shadow:0 0 55px rgba(0,255,136,.55);margin:22px 0">
+<hr style="border-color:rgba(0,255,136,.35);margin:40px 0">
 
-<h3 style="color:#00ff88">4. Month-wise Import Seasonality</h3>
-
-<p>
-Edible oil imports into India follow a seasonal pattern rather than uniform monthly
-distribution. Import volumes typically increase ahead of festive seasons and during
-periods of inventory replenishment.
-</p>
-
-<ul>
-<li><b>Oct – Jan:</b> Peak inflow (festive demand, pipeline build-up)</li>
-<li><b>Feb – Apr:</b> Stable imports</li>
-<li><b>May – Jul:</b> Moderate inflow (inventory drawdown)</li>
-<li><b>Aug – Sep:</b> Pre-festival stock build-up</li>
-</ul>
-
-<canvas id="monthlyFlowChart" height="140"></canvas>
-
-<hr style="border-color:rgba(0,255,136,.3);margin:40px 0">
-
-<h3 style="color:#00ff88">5. Processing, Refining & Domestic Consumption</h3>
+<h3>3. Processing, Refining & Domestic Distribution</h3>
 
 <p>
-Once cleared from ports and container yards, edible oils are transferred to refineries
-and processing plants where crude oils are refined, stabilised and blended to meet
-domestic quality standards. These facilities form the backbone of India’s edible oil
-consumption ecosystem.
+After clearance from ports and container yards, crude edible oils are transported to
+refineries and processing plants. These facilities carry out refining, bleaching,
+deodorisation and blending to meet domestic quality standards and consumption preferences.
 </p>
 
 <p>
-Typical national edible oil inventory coverage ranges between <b>30–45 days</b>,
-depending on import pipeline, seasonal demand and price outlook.
+Processing plants are typically located close to ports or major consumption centres to
+optimise logistics costs and ensure steady supply. The refined output is then distributed
+to FMCG manufacturers, food service operators, wholesale markets and retail channels.
 </p>
 
-<img src="images/processing_plant.jpg" style="width:100%;height:360px;object-fit:cover;border-radius:20px;
-box-shadow:0 0 55px rgba(0,255,136,.55);margin:22px 0">
+<img src="images/processing_plant.jpg"
+style="width:100%;height:360px;object-fit:cover;border-radius:22px;
+box-shadow:0 0 60px rgba(0,255,136,.6);margin:25px 0">
 
-<h3 style="color:#00ff88">6. Role of Brokerage in Physical Trade</h3>
+<p>
+National edible oil inventory coverage typically ranges between <b>30–45 days</b>, depending
+on import pipeline strength, seasonal demand and price outlook. Inventory levels are
+actively managed to balance price risk, storage costs and supply continuity.
+</p>
+
+<hr style="border-color:rgba(0,255,136,.35);margin:40px 0">
+
+<h3>4. Annual Import Trend (Indicative)</h3>
+
+<p>
+India’s edible oil imports have shown a steady upward trend over recent years, driven by
+population growth, rising per-capita consumption and limited scope for rapid domestic
+oilseed expansion. Temporary fluctuations usually reflect policy interventions or global
+supply disruptions rather than structural demand weakness.
+</p>
+
+<canvas id="importTrendChart" height="140"></canvas>
+
+<p style="font-size:0.95rem;margin-top:12px">
+<b style="color:#00ff88">Green trend</b> indicates demand-led growth, while
+<b style="color:#ff5c5c">red points</b> highlight stress periods due to freight or supply
+volatility.
+</p>
+
+<hr style="border-color:rgba(0,255,136,.35);margin:40px 0">
+
+<h3>5. Role of Brokerage in Physical Trade</h3>
 
 <p>
 In a high-volume import environment, brokers play a critical role in aligning contractual
-terms with physical execution. This includes coordinating shipment windows, quality
-specifications, inspection protocols and port execution.
+terms with physical execution. This includes coordination between buyers, sellers,
+inspection agencies, shipping lines and port operators.
 </p>
 
 <p>
-KNG Commodities LLP operates strictly as a broker-only intermediary and does not assume
-ownership, storage, logistics or financial exposure in any transaction.
+KNG Commodities LLP operates strictly as a <b>broker-only intermediary</b> and does not
+assume ownership, storage, logistics or financial exposure in any transaction. All trades
+are executed directly between contracting parties.
 </p>
 
-<hr style="border-color:rgba(0,255,136,.3);margin:40px 0">
-
-<p style="font-size:0.9rem;opacity:0.85">
+<p style="font-size:0.9rem;opacity:.85;margin-top:25px">
 <b>Data Sources:</b> Solvent Extractors’ Association of India (SEA), Ministry of Consumer
 Affairs (Govt. of India), DGCI&S, USDA Oilseeds & Edible Oils Market Reports, public port
-authority data and industry trade publications.
+authority disclosures and industry trade publications.
 </p>
-`;
-</script>
 
-<!-- ================= CHARTS (REALISTIC STYLE) ================= -->
+<p style="font-size:0.75rem;opacity:.45;margin-top:10px">
+*Certain analytical interpretations and charts are AI-assisted and indicative in nature.
+</p>
+
+<!-- CHART -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-/* Annual Import Trend */
-new Chart(document.getElementById('annualImportChart'),{
+new Chart(document.getElementById('importTrendChart'),{
 type:'line',
 data:{
 labels:['2019','2020','2021','2022','2023','2024'],
 datasets:[{
 data:[13.6,14.0,14.8,15.2,15.8,16.1],
 borderColor:'#00ff88',
-backgroundColor:'rgba(0,255,136,.15)',
-tension:.35,
+backgroundColor:'rgba(0,255,136,.18)',
 fill:true,
+tension:.35,
 pointRadius:5,
-pointBackgroundColor:['#00ff88','#00ff88','#00ff88','#ff5c5c','#00ff88','#00ff88']
+pointBackgroundColor:[
+'#00ff88','#00ff88','#00ff88','#ff5c5c','#00ff88','#00ff88'
+]
 }]
 },
-options:{plugins:{legend:{display:false}},scales:{y:{ticks:{color:'#ccc'}},x:{ticks:{color:'#ccc'}}}}
-});
-
-/* Monthly Seasonality */
-new Chart(document.getElementById('monthlyFlowChart'),{
-type:'bar',
-data:{
-labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-datasets:[{
-data:[1.5,1.4,1.4,1.3,1.2,1.1,1.1,1.2,1.3,1.5,1.6,1.6],
-backgroundColor:['#00ff88','#00ff88','#00ff88','#00ff88','#ff5c5c','#ff5c5c','#ff5c5c','#00ff88','#00ff88','#00ff88','#00ff88','#00ff88']
-}]
-},
-options:{plugins:{legend:{display:false}},scales:{y:{ticks:{color:'#ccc'}},x:{ticks:{color:'#ccc'}}}}
+options:{
+plugins:{legend:{display:false}},
+scales:{
+x:{ticks:{color:'#ccc'}},
+y:{ticks:{color:'#ccc'}}
+}
+}
 });
 </script>
-
-<!-- AI DISCLAIMER -->
-<div style="position:fixed;bottom:8px;right:10px;font-size:0.7rem;opacity:0.45;pointer-events:none">
-*Certain analytical content and charts are AI-assisted and indicative in nature.
 </div>
 
-<script>
-/* ================= PART 5 AUTO-FILL (CONTACT & LEGAL) ================= */
-
-document.getElementById('contact').innerHTML = `
-<h2 style="color:#00ff88">Contact & Corporate Information</h2>
+<!-- ========== CONTACT (PART 3) ========== -->
+<div class="tab-content" id="contact">
+<h2>Contact, Corporate & Legal Information</h2>
 
 <p>
-KNG Commodities LLP operates as an independent commodity brokerage firm,
-headquartered in Mumbai, India. The firm facilitates domestic and international
-trade in edible oils strictly as a broker-only intermediary.
+KNG Commodities LLP is an independent commodity brokerage firm headquartered in Mumbai,
+India. The firm facilitates domestic and international trade in edible oils strictly on a
+broker-only basis and does not undertake any trading, storage, logistics or financial
+exposure.
 </p>
 
-<hr style="border-color:rgba(0,255,136,.3);margin:28px 0">
+<hr style="border-color:rgba(0,255,136,.35);margin:35px 0">
 
-<h3 style="color:#00ff88">Registered Office</h3>
+<h3>Registered Office</h3>
 
 <p>
 <b>KNG Commodities LLP</b><br>
@@ -613,92 +559,114 @@ Maharashtra, India
 <b>GSTIN:</b> 27AASFK4574H1ZR
 </p>
 
-<hr style="border-color:rgba(0,255,136,.3);margin:28px 0">
+<hr style="border-color:rgba(0,255,136,.35);margin:35px 0">
 
-<h3 style="color:#00ff88">Contact Details</h3>
+<h3>Key Contacts</h3>
 
 <p>
-<b>Founder & Director:</b> Nimesh Ashok Galia<br>
+<b>Founder & Director</b><br>
+Nimesh Ashok Galia<br>
 📞 +91 98200 29262<br>
 ✉️ kngcommodities@gmail.com
 </p>
 
-<p style="margin-top:12px">
-<b>Operations Head:</b> Prasanna Gadre<br>
+<p style="margin-top:18px">
+<b>Operations Head</b><br>
+Prasanna Gadre<br>
 📞 +91 97636 33463<br>
 ✉️ kngprasanna@gmail.com
 </p>
 
-<hr style="border-color:rgba(0,255,136,.3);margin:28px 0">
+<hr style="border-color:rgba(0,255,136,.35);margin:35px 0">
 
-<h3 style="color:#00ff88">Broker Disclaimer</h3>
+<h3>Broker-Only Trade Disclaimer</h3>
 
 <p>
-KNG Commodities LLP acts strictly as a broker-only intermediary. The firm does not
-buy, sell, store, transport, insure or finance any goods. All trades are executed
-directly between buyers and sellers based on mutually agreed contractual terms.
+KNG Commodities LLP acts strictly as an independent <b>broker-only intermediary</b>. The firm
+does not buy, sell, store, transport, insure or finance any goods, nor does it take title
+or ownership of any commodity.
 </p>
 
 <p>
-KNG Commodities LLP does not assume responsibility for quality, quantity, delivery,
-payment, performance or any commercial outcome arising from transactions facilitated
-through its brokerage services. All risks remain solely with the contracting parties.
-</p>
-
-<hr style="border-color:rgba(0,255,136,.3);margin:28px 0">
-
-<h3 style="color:#00ff88">Corporate Positioning</h3>
-
-<p>
-Since commencing operations in 2017, KNG Commodities LLP has focused on disciplined
-execution, transparency and market-aligned trade facilitation. The firm’s role is
-limited to connecting counterparties and supporting execution coordination without
-assuming commercial or operational exposure.
+All transactions facilitated by KNG Commodities LLP are executed directly between buyers
+and sellers based on mutually agreed contractual terms. The firm’s role is limited to
+introducing counterparties and supporting execution coordination.
 </p>
 
 <p>
-This website is intended solely for informational purposes and does not constitute
-an offer, solicitation or advisory service of any kind.
+KNG Commodities LLP does not assume responsibility or liability for quality, quantity,
+delivery, payment, performance, defaults, disputes or commercial outcomes arising from
+transactions facilitated through its brokerage services. All risks remain solely with
+the contracting parties.
 </p>
-`;
+
+<hr style="border-color:rgba(0,255,136,.35);margin:35px 0">
+
+<h3>Corporate Positioning & Operating Philosophy</h3>
+
+<p>
+Since commencing operations in 2017, KNG Commodities LLP has focused on disciplined execution,
+transparent communication and market-aligned trade facilitation. The firm operates with a
+long-term relationship mindset rather than short-term transactional focus.
+</p>
+
+<p>
+Execution feasibility, specification clarity and alignment between contractual terms and
+physical logistics form the core of the firm’s brokerage philosophy. This approach helps
+reduce execution risk and supports smoother trade completion for all parties involved.
+</p>
+
+<hr style="border-color:rgba(0,255,136,.35);margin:35px 0">
+
+<h3>Website & Information Disclaimer</h3>
+
+<p>
+The information contained on this website is provided solely for general informational
+purposes. It does not constitute an offer, solicitation, recommendation or advisory
+service of any kind.
+</p>
+
+<p>
+Market data, charts, reports and analytical commentary presented on this website are
+indicative in nature and intended to provide a broad understanding of industry dynamics.
+Actual market conditions may vary significantly based on timing, policy changes and
+commercial factors.
+</p>
+
+<p style="font-size:0.9rem;opacity:.85">
+<b>Data Sources:</b> Solvent Extractors’ Association of India (SEA), Ministry of Consumer
+Affairs (Government of India), Directorate General of Commercial Intelligence and Statistics
+(DGCI&S), USDA Oilseeds & Edible Oils Market Reports, public port authority disclosures and
+industry trade publications.
+</p>
+
+<p style="font-size:0.75rem;opacity:.45;margin-top:12px">
+*Certain analytical interpretations, estimates and visualisations presented on this
+website are AI-assisted and indicative in nature.
+</p>
+
+</div>
+
+<div class="footer-note">
+© KNG Commodities LLP • Broker-Only Trade Facilitation • Operating Since 2017
+</div>
+
+</div>
+</section>
+
+<script>
+function openTab(id,btn){
+document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+}
+document.querySelectorAll('.product').forEach(card=>{
+card.addEventListener('click',()=>{
+if(window.innerWidth<=768){card.classList.toggle('active')}
+});
+});
 </script>
 
-<!-- ================= PART 6 FINAL POLISH ================= -->
-<style>
-/* FOOTER */
-.site-footer{
-margin-top:60px;
-padding:25px 10px;
-text-align:center;
-font-size:0.85rem;
-opacity:0.75;
-border-top:1px solid rgba(0,255,136,.35);
-}
-
-/* SMOOTH HEIGHT ADJUST (NO JUMP FEEL) */
-.master-box{
-transition:min-height .3s ease;
-}
-
-/* TAB CONTENT SPACING POLISH */
-.tab-content p{margin-bottom:14px}
-.tab-content h2,.tab-content h3{margin-bottom:12px}
-.tab-content ul{margin:10px 0 18px 22px}
-
-/* PRODUCT TABLE POLISH */
-.product-body table tr:last-child td,
-.product-body table tr:last-child th{
-border-bottom:none;
-}
-
-/* MOBILE POLISH */
-@media(max-width:768px){
-.master-box{border-radius:20px}
-.tabs button{padding:12px 22px;font-size:14px}
-}
-</style>
-
-<footer class="site-footer">
-© KNG Commodities LLP • Broker-Only Trade Facilitation • Operating Since 2017
-</footer>
-
+</body>
+</html>
